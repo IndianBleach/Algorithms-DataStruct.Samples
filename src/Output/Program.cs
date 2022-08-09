@@ -42,6 +42,25 @@ int LinearSearch(int key, int[] array)
     return -1;
 }
 
+int[] BubbleSort(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        for (int j = 0; j < arr.Length; j++)
+        {
+            if (arr[i] < arr[j])
+            {
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+            }
+        }
+    }
+
+    return arr;
+}
+
+
 
 //https://proglib.io/p/6-search-algorithms-java
 int[] GetPatternStringArray(string pattern)
@@ -113,7 +132,9 @@ List<int> PerformKMPStringPatternSearch(string searchText, string pattern)
     return founds;
 }
 
-for (int i = 0; i < 300; i++)
+int[] res = BubbleSort(new int[] { 1, 7, 2, 59, 24, 56 });
+
+for (int i = 0; i < res.Length; i++)
 {
-    Console.WriteLine(String.Format("{0}, {1}", i, IsPriveNumber(i)));
+    Console.Write(res[i] + " ");
 }
