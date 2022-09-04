@@ -140,15 +140,18 @@ internal class Program
         // Structs.LinkedList<T>
 
         // Structs.FixedStack<T>
-        Structs.FixedStack<int> stack = new(10);
-        
-        stack.Push(1);
-        stack.Push(2);
-        stack.Push(3);
-        stack.Push(4);
-        stack.Push(5);
 
-        stack.Pop();
-        stack.Pop();
+        // Structs.DynamicArrayQueue<T>
+
+        Structs.DynamicArrayQueue<int> queue = new(1,2,3);
+        
+        queue.Enqueue(4);
+
+        queue.Dequeue();
+
+        queue.Enqueue(5,6,7);
+
+        Console.WriteLine(queue.Top());
+        
     }
 }
