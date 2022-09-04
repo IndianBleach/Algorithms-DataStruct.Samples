@@ -136,21 +136,19 @@ internal class Program
 
         int[] res = BubbleSort(new int[] { 1, 7, 2, 59, 24, 56 });
 
-        // Linked List
 
-        Structs.LinkedList<int> list = new();
+        // Structs.LinkedList<T>
+
+        // Structs.FixedStack<T>
+        Structs.FixedStack<int> stack = new(10);
         
-        list.Add(1);
-        list.Add(2);
-        list.Add(3);
-        list.Add(4);
-        list.Add(5);
+        stack.Push(1);
+        stack.Push(2);
+        stack.Push(3);
+        stack.Push(4);
+        stack.Push(5);
 
-        list.Remove(3);
-
-        Console.WriteLine(list.Contains(3));
-        Console.WriteLine(list.Contains(5));
-
-
+        stack.Pop();
+        stack.Pop();
     }
 }
